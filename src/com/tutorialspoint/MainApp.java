@@ -21,5 +21,14 @@ public class MainApp {
       HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
       objA.setMessage("I'm object A");
       objB.getMessage();
+      
+      HelloWorld objC = (HelloWorld) context.getBean("helloWorld2");
+
+      objC.setMessage("I'm object C");
+      objC.getMessage();
+
+      HelloWorld objD = (HelloWorld) context.getBean("helloWorld2");
+      //objA.setMessage("I'm object A");
+      objD.getMessage();
    }
 }
