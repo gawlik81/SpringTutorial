@@ -33,5 +33,11 @@ public class MainApp {
       HelloWorld objD = (HelloWorld) context.getBean("helloWorld2");
       //objA.setMessage("I'm object A");
       objD.getMessage();
+      
+      HelloIndia objE = (HelloIndia) context.getBean("helloIndia");
+      //objA.setMessage("I'm object A");
+      objE.getMessage();
+      objE.getMessage2();
+      objE.getMessage3();
    }
 }
