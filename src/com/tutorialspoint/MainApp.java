@@ -14,6 +14,7 @@ public class MainApp {
    public static void main(String[] args) {
       AbstractApplicationContext  context = new ClassPathXmlApplicationContext("Beans.xml");
       context.registerShutdownHook();
+      
       HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
 
       //objA.setMessage("I'm object A");
