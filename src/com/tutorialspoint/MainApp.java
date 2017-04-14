@@ -7,12 +7,20 @@
  */
 package com.tutorialspoint;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
    public static void main(String[] args) {
       AbstractApplicationContext  context = new ClassPathXmlApplicationContext("Beans.xml");
+      ApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
+      
+      HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
+      helloWorld.setMessage("___Hello World___!");
+      helloWorld.getMessage();
+      
       context.registerShutdownHook();
       
       HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
