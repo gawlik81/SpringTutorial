@@ -34,5 +34,12 @@ public class Test {
     Employee2 e1=(Employee2)factory3.getBean("e1");
     e1.show();
     
+    // --- Constructor Injection with Collection Example
+    Resource r3=new ClassPathResource("applicationContext.xml");
+    BeanFactory factory4=new XmlBeanFactory(r);
+    
+    Question q=(Question)factory4.getBean("q");
+    q.displayInfo();
+    
   }
 }

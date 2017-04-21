@@ -40,4 +40,16 @@
 <constructor-arg ref="address1"></constructor-arg>
 </bean>
 
+<bean id="q" class="com.javatpoint.Question">
+<constructor-arg value="111"></constructor-arg>
+<constructor-arg value="What is java?"></constructor-arg>
+<constructor-arg>
+<list>
+<value>Java is a programming language</value>
+<value>Java is a Platform</value>
+<value>Java is an Island of Indonasia</value>
+</list>
+</constructor-arg>
+</bean>
+
 </beans>
