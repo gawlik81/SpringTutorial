@@ -8,5 +8,8 @@
 <bean id="studentbean" class="com.javatpoint.Student">
 <property name="name" value="Vimal Jaiswal"></property>
 </bean>
+<bean id="studentbeanappcon" class="com.javatpoint.Student">
+<property name="name" value="Paweł Miernik"></property>
+</bean>
 
 </beans>
