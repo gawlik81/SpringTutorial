@@ -19,5 +19,12 @@ public class Test {
 
     Student studentappcon = (Student)context.getBean("studentbeanappcon");
     studentappcon.displayInfo();
+    
+    // --- Dependency Injection by Constructor Example
+    Resource r=new ClassPathResource("applicationContext.xml");
+    BeanFactory factory2=new XmlBeanFactory(r);
+    
+    Employee s=(Employee)factory2.getBean("e");
+    s.show();
   }
 }
