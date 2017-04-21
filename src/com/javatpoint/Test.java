@@ -26,5 +26,13 @@ public class Test {
     
     Employee s=(Employee)factory2.getBean("e");
     s.show();
+    
+    // --- Constructor Injection with Dependent Object
+    Resource r2=new ClassPathResource("applicationContext.xml");
+    BeanFactory factory3=new XmlBeanFactory(r);
+    
+    Employee2 e1=(Employee2)factory3.getBean("e1");
+    e1.show();
+    
   }
 }
