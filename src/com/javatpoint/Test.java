@@ -41,5 +41,12 @@ public class Test {
     Question q=(Question)factory4.getBean("q");
     q.displayInfo();
     
+    // --- Constructor Injection with Non-String Collection (having Dependent Object) Example
+	Resource r4=new ClassPathResource("applicationContext.xml");
+	BeanFactory factory5=new XmlBeanFactory(r);
+	
+	Question q2=(Question)factory5.getBean("q2");
+	q2.displayInfo();
+    
   }
 }

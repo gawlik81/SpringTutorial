@@ -52,4 +52,27 @@
 </constructor-arg>
 </bean>
 
+<bean id="ans1" class="com.javatpoint.Answer2">
+<constructor-arg value="1"></constructor-arg>
+<constructor-arg value="Java is a programming language"></constructor-arg>
+<constructor-arg value="John"></constructor-arg>
+</bean>
+
+<bean id="ans2" class="com.javatpoint.Answer2">
+<constructor-arg value="2"></constructor-arg>
+<constructor-arg value="Java is a Platform"></constructor-arg>
+<constructor-arg value="Ravi"></constructor-arg>
+</bean>
+
+<bean id="q2" class="com.javatpoint.Question2">
+<constructor-arg value="111"></constructor-arg>
+<constructor-arg value="What is java?"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="ans1"/>
+<ref bean="ans2"/>
+</list>
+</constructor-arg>
+</bean>
+
 </beans>
