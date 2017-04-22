@@ -120,5 +120,21 @@
 </constructor-arg>
 </bean>
 
+<bean id="e51" class="com.javatpoint.Employee5">
+<constructor-arg value="101"></constructor-arg>
+<constructor-arg  value="Sachin"></constructor-arg>
+</bean>
+
+<bean id="address51" class="com.javatpoint.Address5">
+<constructor-arg value="21,Lohianagar"></constructor-arg>
+<constructor-arg value="Ghaziabad"></constructor-arg>
+<constructor-arg value="UP"></constructor-arg>
+<constructor-arg value="USA"></constructor-arg>
+</bean>
+
+<bean id="e52" class="com.javatpoint.Employee5" parent="e51">
+<constructor-arg ref="address51"></constructor-arg>
+</bean>
+
 
 </beans>

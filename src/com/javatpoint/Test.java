@@ -61,6 +61,15 @@ public class Test {
 	
 	Question4 q4=(Question4)factory7.getBean("q4");
 	q4.displayInfo();
+	
+	// --- Inheriting Bean in Spring
+	Resource r7=new ClassPathResource("applicationContext.xml");
+	BeanFactory factory8=new XmlBeanFactory(r7);
+	
+	Employee5 e52=(Employee5)factory8.getBean("e52");
+	e52.show();
+	Employee5 e51=(Employee5)factory8.getBean("e51");
+	e51.show();
 
     
   }
