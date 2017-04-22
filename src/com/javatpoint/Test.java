@@ -20,7 +20,7 @@ public class Test {
     Student studentappcon = (Student)context.getBean("studentbeanappcon");
     studentappcon.displayInfo();
     
-    // --- Dependency Injection by Constructor Example
+    // --- Dependency Injection by Constructor
     Resource r=new ClassPathResource("applicationContext.xml");
     BeanFactory factory2=new XmlBeanFactory(r);
     
@@ -34,26 +34,33 @@ public class Test {
     Employee2 e1=(Employee2)factory3.getBean("e1");
     e1.show();
     
-    // --- Constructor Injection with Collection Example
+    // --- Constructor Injection with Collection
     Resource r3=new ClassPathResource("applicationContext.xml");
     BeanFactory factory4=new XmlBeanFactory(r3);
     
     Question q=(Question)factory4.getBean("q");
     q.displayInfo();
     
-    // --- Constructor Injection with Non-String Collection (having Dependent Object) Example
+    // --- Constructor Injection with Non-String Collection (having Dependent Object)
 	Resource r4=new ClassPathResource("applicationContext.xml");
 	BeanFactory factory5=new XmlBeanFactory(r4);
 	
 	Question2 q2=(Question2)factory5.getBean("q2");
 	q2.displayInfo();
 	
-	// --- Constructor Injection with Map Example
+	// --- Constructor Injection with Map
 	Resource r5=new ClassPathResource("applicationContext.xml");
 	BeanFactory factory6=new XmlBeanFactory(r5);
 	
 	Question3 q3=(Question3)factory6.getBean("q3");
 	q3.displayInfo();
+	
+	// --- Constructor Injection with Non-String Map (having dependent Object)
+	Resource r6=new ClassPathResource("applicationContext.xml");
+	BeanFactory factory7=new XmlBeanFactory(r6);
+	
+	Question4 q4=(Question4)factory7.getBean("q4");
+	q4.displayInfo();
 
     
   }
