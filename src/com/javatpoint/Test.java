@@ -29,24 +29,32 @@ public class Test {
     
     // --- Constructor Injection with Dependent Object
     Resource r2=new ClassPathResource("applicationContext.xml");
-    BeanFactory factory3=new XmlBeanFactory(r);
+    BeanFactory factory3=new XmlBeanFactory(r2);
     
     Employee2 e1=(Employee2)factory3.getBean("e1");
     e1.show();
     
     // --- Constructor Injection with Collection Example
     Resource r3=new ClassPathResource("applicationContext.xml");
-    BeanFactory factory4=new XmlBeanFactory(r);
+    BeanFactory factory4=new XmlBeanFactory(r3);
     
     Question q=(Question)factory4.getBean("q");
     q.displayInfo();
     
     // --- Constructor Injection with Non-String Collection (having Dependent Object) Example
 	Resource r4=new ClassPathResource("applicationContext.xml");
-	BeanFactory factory5=new XmlBeanFactory(r);
+	BeanFactory factory5=new XmlBeanFactory(r4);
 	
 	Question2 q2=(Question2)factory5.getBean("q2");
 	q2.displayInfo();
+	
+	// --- Constructor Injection with Map Example
+	Resource r5=new ClassPathResource("applicationContext.xml");
+	BeanFactory factory6=new XmlBeanFactory(r5);
+	
+	Question3 q3=(Question3)factory6.getBean("q3");
+	q3.displayInfo();
+
     
   }
 }
