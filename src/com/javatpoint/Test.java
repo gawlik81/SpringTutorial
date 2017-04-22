@@ -45,7 +45,7 @@ public class Test {
 	Resource r4=new ClassPathResource("applicationContext.xml");
 	BeanFactory factory5=new XmlBeanFactory(r);
 	
-	Question q2=(Question)factory5.getBean("q2");
+	Question2 q2=(Question2)factory5.getBean("q2");
 	q2.displayInfo();
     
   }
