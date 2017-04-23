@@ -150,5 +150,19 @@
 
 </bean>
 
+<!-- Setter Injection with Dependent Object-->
+<bean id="address7" class="com.javatpoint.Address7">
+<property name="addressLine1" value="51,Lohianagar"></property>
+<property name="city" value="Ghaziabad"></property>
+<property name="state" value="UP"></property>
+<property name="country" value="India"></property>
+</bean>
+
+<bean id="obj7" class="com.javatpoint.Employee7">
+<property name="id" value="1"></property>
+<property name="name" value="Sachin Yadav"></property>
+<property name="address" ref="address7"></property>
+</bean>
+
 
 </beans>

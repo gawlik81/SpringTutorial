@@ -21,62 +21,50 @@ public class Test {
     studentappcon.displayInfo();
     
     // --- Dependency Injection by Constructor
-    Resource r=new ClassPathResource("applicationContext.xml");
-    BeanFactory factory2=new XmlBeanFactory(r);
-    
-    Employee s=(Employee)factory2.getBean("e");
+    Employee s=(Employee)context.getBean("e");
     s.show();
     
     // --- Constructor Injection with Dependent Object
-    Resource r2=new ClassPathResource("applicationContext.xml");
-    BeanFactory factory3=new XmlBeanFactory(r2);
-    
-    Employee2 e1=(Employee2)factory3.getBean("e1");
+    System.out.println("");
+    Employee2 e1=(Employee2)context.getBean("e1");
     e1.show();
     
     // --- Constructor Injection with Collection
-    Resource r3=new ClassPathResource("applicationContext.xml");
-    BeanFactory factory4=new XmlBeanFactory(r3);
-    
-    Question q=(Question)factory4.getBean("q");
+    System.out.println("");
+    Question q=(Question)context.getBean("q");
     q.displayInfo();
     
     // --- Constructor Injection with Non-String Collection (having Dependent Object)
-	Resource r4=new ClassPathResource("applicationContext.xml");
-	BeanFactory factory5=new XmlBeanFactory(r4);
-	
-	Question2 q2=(Question2)factory5.getBean("q2");
+    System.out.println("");
+    Question2 q2=(Question2)context.getBean("q2");
 	q2.displayInfo();
 	
 	// --- Constructor Injection with Map
-	Resource r5=new ClassPathResource("applicationContext.xml");
-	BeanFactory factory6=new XmlBeanFactory(r5);
-	
-	Question3 q3=(Question3)factory6.getBean("q3");
+    System.out.println("");
+	Question3 q3=(Question3)context.getBean("q3");
 	q3.displayInfo();
 	
 	// --- Constructor Injection with Non-String Map (having dependent Object)
-	Resource r6=new ClassPathResource("applicationContext.xml");
-	BeanFactory factory7=new XmlBeanFactory(r6);
-	
-	Question4 q4=(Question4)factory7.getBean("q4");
+    System.out.println("");
+	Question4 q4=(Question4)context.getBean("q4");
 	q4.displayInfo();
 	
 	// --- Inheriting Bean in Spring
-	Resource r7=new ClassPathResource("applicationContext.xml");
-	BeanFactory factory8=new XmlBeanFactory(r7);
-	
-	Employee5 e52=(Employee5)factory8.getBean("e52");
+    System.out.println("");
+	Employee5 e52=(Employee5)context.getBean("e52");
 	e52.show();
-	Employee5 e51=(Employee5)factory8.getBean("e51");
+	Employee5 e51=(Employee5)context.getBean("e51");
 	e51.show();
 	
 	// --- Dependency Injection by setter method
-	Resource r8=new ClassPathResource("applicationContext.xml");
-	BeanFactory factory9=new XmlBeanFactory(r8);
-	
-	Employee6 e6=(Employee6)factory.getBean("obj");
+    System.out.println("");
+	Employee6 e6=(Employee6)context.getBean("obj");
 	e6.display();
+	
+	// --- Setter Injection with Dependent Object
+    System.out.println("");
+	Employee7 e7=(Employee7)context.getBean("obj7");
+	e7.displayInfo();
 
     
   }
