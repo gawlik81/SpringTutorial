@@ -136,5 +136,19 @@
 <constructor-arg ref="address51"></constructor-arg>
 </bean>
 
+<!-- Dependency Injection by setter method -->
+<bean id="obj" class="com.javatpoint.Employee6">
+<property name="id">
+<value>20</value>
+</property>
+<property name="name">
+<value>Arun</value>
+</property>
+<property name="city">
+<value>ghaziabad</value>
+</property>
+
+</bean>
+
 
 </beans>

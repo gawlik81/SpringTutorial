@@ -70,6 +70,13 @@ public class Test {
 	e52.show();
 	Employee5 e51=(Employee5)factory8.getBean("e51");
 	e51.show();
+	
+	// --- Dependency Injection by setter method
+	Resource r8=new ClassPathResource("applicationContext.xml");
+	BeanFactory factory9=new XmlBeanFactory(r8);
+	
+	Employee6 e6=(Employee6)factory.getBean("obj");
+	e6.display();
 
     
   }
