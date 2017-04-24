@@ -65,6 +65,11 @@ public class Test {
     System.out.println("");
 	Employee7 e7=(Employee7)context.getBean("obj7");
 	e7.displayInfo();
+	
+	// --- Setter Injection with Collection
+	  System.out.println("");
+	Question8 q8 = (Question8)context.getBean("q8");
+	q8.displayInfo();
 
     
   }
