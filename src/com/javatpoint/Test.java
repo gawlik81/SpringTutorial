@@ -75,6 +75,11 @@ public class Test {
 	  System.out.println("");
 	 Question9 q9=(Question9)factory.getBean("q9");
 	 q9.displayInfo();
+	 
+	 // --- Setter Injection with Map
+	   System.out.println("");
+	 Question10 q10=(Question10)factory.getBean("q10");
+	 q10.displayInfo();
 
     
   }
