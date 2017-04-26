@@ -70,6 +70,11 @@ public class Test {
 	  System.out.println("");
 	Question8 q8 = (Question8)context.getBean("q8");
 	q8.displayInfo();
+	
+	// --- Setter Injection with Non-String Collection
+	  System.out.println("");
+	 Question9 q9=(Question9)factory.getBean("q9");
+	 q9.displayInfo();
 
     
   }
