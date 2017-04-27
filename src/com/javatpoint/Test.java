@@ -80,6 +80,11 @@ public class Test {
 	   System.out.println("");
 	 Question10 q10=(Question10)factory.getBean("q10");
 	 q10.displayInfo();
+	 
+	 // --- Setter Injection with Non-String Map
+	   System.out.println("");
+	 Question11 q11=(Question11)factory.getBean("q11");
+	 q11.displayInfo();
 
     
   }

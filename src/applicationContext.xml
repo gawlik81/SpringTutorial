@@ -212,5 +212,40 @@
 </property>
 </bean>
 
+<!-- Setter Injection with Non-String Map -->
+<bean id="answer111" class="com.javatpoint.Answer11">
+<property name="id" value="1"></property>
+<property name="answer" value="Java is a Programming Language"></property>
+<property name="postedDate" value="12/12/2001"></property>
+</bean>
+<bean id="answer112" class="com.javatpoint.Answer11">
+<property name="id" value="2"></property>
+<property name="answer" value="Java is a Platform"></property>
+<property name="postedDate" value="12/12/2003"></property>
+</bean>
+
+<bean id="user111" class="com.javatpoint.User11">
+<property name="id" value="1"></property>
+<property name="name" value="Arun Kumar"></property>
+<property name="email" value="arun@gmail.com"></property>
+</bean>
+<bean id="user112" class="com.javatpoint.User11">
+<property name="id" value="2"></property>
+<property name="name" value="Varun Kumar"></property>
+<property name="email" value="Varun@gmail.com"></property>
+</bean>
+
+<bean id="q11" class="com.javatpoint.Question11">
+<property name="id" value="1"></property>
+<property name="name" value="What is Java?"></property>
+<property name="answers">
+<map>
+<entry key-ref="answer111" value-ref="user111"></entry>
+<entry key-ref="answer112" value-ref="user112"></entry>
+</map>
+</property>
+</bean>
+
+
 
 </beans>
