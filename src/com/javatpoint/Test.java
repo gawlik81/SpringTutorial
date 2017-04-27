@@ -86,6 +86,5 @@ public class Test {
 	 Question11 q11=(Question11)factory.getBean("q11");
 	 q11.displayInfo();
 
-    
   }
 }

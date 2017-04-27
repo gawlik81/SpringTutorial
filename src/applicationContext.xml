@@ -246,6 +246,10 @@
 </property>
 </bean>
 
+<!-- Autowiring in Spring -->
+<bean id="b" class="org.sssit.B"></bean>  
+<bean id="a" class="org.sssit.A" autowire="byName"></bean>  
+
 
 
 </beans>
