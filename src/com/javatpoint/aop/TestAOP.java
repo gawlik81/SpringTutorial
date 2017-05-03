@@ -19,6 +19,6 @@ public class TestAOP {
 
     A a = factory.getBean("proxy", A.class);
     System.out.println("proxy class name: "+a.getClass().getName());  
-    a.m();
+    a.m("Witam");
   }
 }

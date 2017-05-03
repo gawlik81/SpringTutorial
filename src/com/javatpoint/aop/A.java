@@ -8,7 +8,7 @@
 package com.javatpoint.aop;
 
 public class A {
-  public void m() {
-    System.out.println("actual business logic");
+  public void m(String text) {
+    System.out.println("actual business logic " + text);
   }
 }

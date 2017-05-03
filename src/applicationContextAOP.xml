@@ -6,12 +6,14 @@
 
 	<bean id="obj" class="com.javatpoint.aop.A"></bean>
 	<bean id="ba" class="com.javatpoint.aop.BeforeAdvisor"></bean>
+	<bean id="aa" class="com.javatpoint.aop.AfterAdvisor"></bean>  
 
 	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="target" ref="obj"></property>
 		<property name="interceptorNames">
 			<list>
 				<value>ba</value>
+				<value>aa</value>
 			</list>
 		</property>
 	</bean>
