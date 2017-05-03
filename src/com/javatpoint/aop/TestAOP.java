@@ -17,8 +17,13 @@ public class TestAOP {
     Resource r = new ClassPathResource("applicationContextAOP.xml");
     BeanFactory factory = new XmlBeanFactory(r);
 
-    A a = factory.getBean("proxy", A.class);
+/*    A a = factory.getBean("proxy", A.class);
     System.out.println("proxy class name: "+a.getClass().getName());  
-    a.m("Witam");
+    a.m("Witam");*/
+    
+    Validator v=factory.getBean("proxy",Validator.class);  
+    try{  
+    v.validate(17);  
+    }catch(Exception e){e.printStackTrace();}  
   }
 }

@@ -5,17 +5,20 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="obj" class="com.javatpoint.aop.A"></bean>
+	<bean id="objV" class="com.javatpoint.aop.Validator"></bean>
 	<bean id="ba" class="com.javatpoint.aop.BeforeAdvisor"></bean>
 	<bean id="afa" class="com.javatpoint.aop.AfterAdvisor"></bean> 
-	<bean id="ara" class="com.javatpoint.aop.AroundAdvisor"></bean>   
+	<bean id="ara" class="com.javatpoint.aop.AroundAdvisor"></bean>  
+	<bean id="ta" class="com.javatpoint.aop.ThrowsAdvisor"></bean>   
 
 	<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="target" ref="obj"></property>
+		<property name="target" ref="objV"></property>
 		<property name="interceptorNames">
 			<list>
 				<!--value>ba</value>
-				<value>afa</value-->
-				<value>ara</value>
+				<value>afa</value>
+				<value>ara</value-->
+				<value>ta</value>
 			</list>
 		</property>
 	</bean>
