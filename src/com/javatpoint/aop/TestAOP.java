@@ -23,7 +23,7 @@ public class TestAOP {
     
     Validator v=factory.getBean("proxy",Validator.class);  
     try{  
-    v.validate(17);  
+    v.validate(19);  
     }catch(Exception e){e.printStackTrace();}  
   }
 }
