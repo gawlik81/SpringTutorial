@@ -65,5 +65,6 @@
 	<classpathentry kind="lib" path="lib/spring-websocket-4.3.7.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="lib/spring-websocket-4.3.7.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/aspectjrt-1.6.11.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.3-1104.jdbc41.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
