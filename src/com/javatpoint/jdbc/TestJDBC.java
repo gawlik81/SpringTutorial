@@ -14,9 +14,11 @@ public class TestJDBC {
     ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContextJDBC.xml");
     
     EmployeeDao dao=(EmployeeDao)ctx.getBean("edao");
-    int status=dao.saveEmployee(new Employee(102,"Amit",35000));
+    int status=dao.saveEmployee(new Employee(102,"Ala",35000));
     System.out.println(status);
     
+    Boolean ret=dao.saveEmployeeByPreparedStatement(new Employee(102,"Pawe³",35));
+    System.out.println(ret);
     /*int status=dao.updateEmployee(new Employee(102,"Sonoo",15000));
     System.out.println(status);
     */
