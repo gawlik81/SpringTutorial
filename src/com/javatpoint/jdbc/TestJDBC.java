@@ -33,9 +33,14 @@ public class TestJDBC {
     int status=dao.deleteEmployee(e);
     System.out.println(status);*/
     
-    List<Employee> list=dao.getAllEmployees();  
+    List<Employee> list1=dao.getAllEmployees();  
     
-    for(Employee e:list)  
+    for(Employee e:list1)  
+        System.out.println(e);  
+    
+    List<Employee> list2=dao.getAllEmployeesRowMapper();  
+    
+    for(Employee e:list2)  
         System.out.println(e);  
     
   }
