@@ -45,4 +45,8 @@ public class Employee {
     this.salary = salary;
   }
 
+  public String toString() {
+    return id + " " + name + " " + salary;
+  }
+
 }
